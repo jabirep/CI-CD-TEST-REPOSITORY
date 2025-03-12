@@ -22,7 +22,13 @@ public class AppTest {
 
     @Test
     public void shouldAnswerWithTrue() {
+        driver=new ChromeDriver();
         System.out.println("hi jabir");
+    	driver.findElement(By.id("employeeName")).sendKeys("jabir");
+    	driver.findElement(By.id("employeeEmail")).sendKeys("abc@gmail.com");
+    	driver.findElement(By.xpath("//button[@type='submit']")).click();
+    
+        
     }
 
     @AfterMethod

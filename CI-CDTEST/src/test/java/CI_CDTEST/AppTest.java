@@ -17,7 +17,6 @@ public class AppTest {
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
-        driver.get("http://localhost:8083/");
     }
 
 
@@ -25,6 +24,7 @@ public class AppTest {
     public void shouldAnswerWithTrue() {
         driver=new ChromeDriver();
         System.out.println("hi jabir");
+        driver.get("http://localhost:8083/");
     	driver.findElement(By.id("employeeName")).sendKeys("jabir");
     	driver.findElement(By.id("employeeEmail")).sendKeys("abc@gmail.com");
     	driver.findElement(By.xpath("//button[@type='submit']")).click();

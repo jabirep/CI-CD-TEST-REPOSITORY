@@ -8,26 +8,20 @@ import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest {
 
-    /**
-     * Rigorous Test :-)
-     */
     WebDriver driver;
     
     @BeforeMethod
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
+        driver.get("http://localhost:8083/");
     }
 
 
     @Test
     public void shouldAnswerWithTrue() {
-        driver.get("http://localhost:8083/");
         System.out.println("hi jabir");
     }
 

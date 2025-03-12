@@ -27,9 +27,16 @@ public class AppTest {
         driver.get("http://localhost:8083/");
     	driver.findElement(By.id("employeeName")).sendKeys("jabir");
     	driver.findElement(By.id("employeeEmail")).sendKeys("abc@gmail.com");
+        driver.findElement(By.id("employeePosition")).sendKeys("engineer");
     	driver.findElement(By.xpath("//button[@type='submit']")).click();
-    
-        
+    }
+
+    @Test
+    public void verifyPageTittle() {
+        driver=new ChromeDriver();
+        String actualTittle=driver.getTitle();
+    	String expectedTittle="Employee Management";
+    	Assert.assertEquals(actualTittle, expectedTittle);
     }
 
     @AfterMethod

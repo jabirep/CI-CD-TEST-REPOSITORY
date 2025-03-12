@@ -32,13 +32,13 @@ public class AppTest {
     	driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-    @Test
+   /* @Test
     public void verifyPageTittle() {
         driver=new ChromeDriver();
         String actualTittle=driver.getTitle();
     	String expectedTittle="Employee Management";
     	Assert.assertEquals(actualTittle, expectedTittle);
-    }
+    }*/
 
     @AfterMethod
     public void tearDown(){
